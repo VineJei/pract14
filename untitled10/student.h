@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "queue.h"  // Include queue.h to make struct Queue visible
+#include "queue.h"
 
 struct Student {
     char surname[50];
@@ -27,4 +27,4 @@ void load_students_from_file(const char* filename, struct Queue* queue);
 void save_students_to_file(const char* filename, struct Student* students);
 void add_students_to_queue_and_save(const char* filename, struct Queue* queue, struct Student* new_students);
 
-#endif // STUDENT_H
+#endif
