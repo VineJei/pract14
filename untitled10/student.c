@@ -89,14 +89,12 @@ void save_students_to_file(const char* filename, struct Student* students) {
 }
 
 void add_students_to_queue_and_save(const char* filename, struct Queue* queue, struct Student* new_students) {
-    // Add new students to the queue
     struct Student* current_student = new_students;
     while (current_student != NULL) {
         enqueue(queue, current_student);
         current_student = current_student->next;
     }
 
-    // Save the updated list of students to the file
     struct QueueNode* current_node = queue->front;
     struct Student* all_students = NULL;
     while (current_node != NULL) {
@@ -106,7 +104,6 @@ void add_students_to_queue_and_save(const char* filename, struct Queue* queue, s
     }
     save_students_to_file(filename, all_students);
 
-    // Free the temporary linked list of all students
     while (all_students != NULL) {
         struct Student* next = all_students->next;
         free(all_students);
