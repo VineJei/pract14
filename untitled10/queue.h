@@ -19,4 +19,4 @@ struct Student* dequeue(struct Queue* queue);
 void print_queue(const struct Queue* queue);
 void free_queue(struct Queue* queue);
 
-#endif // QUEUE_H
+#endif
