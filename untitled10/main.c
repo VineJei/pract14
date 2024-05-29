@@ -8,16 +8,13 @@ int main() {
 
     struct Queue* student_queue = create_queue();
 
-    // Load students from file
     load_students_from_file("students.txt", student_queue);
 
-    // New students to add
     struct Student* new_students = NULL;
-    new_students = add_student(new_students, create_student("ˆ¢ ­®¢ ", "€­­ ", "female", 20, "ˆ‘-208", 4, 5, 5));
-    new_students = add_student(new_students, create_student("¥âà®¢ ", "Œ à¨ï", "female", 21, "ˆ‘-307", 5, 5, 4));
-    new_students = add_student(new_students, create_student("‘¨¤®à®¢ ", "…«¥­ ", "female", 19, "‘ˆ‘-107", 5, 5, 5));
+    new_students = add_student(new_students, create_student("Ë†Â¢Â Â­Â®Â¢Â ", "â‚¬Â­Â­Â ", "female", 20, "Ë†â€˜Â-208", 4, 5, 5));
+    new_students = add_student(new_students, create_student("ÂÂ¥Ã¢Ã Â®Â¢Â ", "Å’Â Ã Â¨Ã¯", "female", 21, "Ë†â€˜Â-307", 5, 5, 4));
+    new_students = add_student(new_students, create_student("â€˜Â¨Â¤Â®Ã Â®Â¢Â ", "â€¦Â«Â¥Â­Â ", "female", 19, "â€˜Ë†â€˜-107", 5, 5, 5));
 
-    // Add new students and save to file
     add_students_to_queue_and_save("students.txt", student_queue, new_students);
 
     printf("Unique constant value: %d\n", UNIQUE_CONSTANT);
@@ -33,8 +30,7 @@ int main() {
         }
         current_node = current_node->next;
     }
-
-    // Free memory
+    
     free_queue(student_queue);
 
     return 0;
